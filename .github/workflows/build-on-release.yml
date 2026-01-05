@@ -67,8 +67,8 @@ jobs:
           build-args: |
             APP_VERSION=${{ steps.upstream.outputs.tag }}
           tags: |
-            docker.io/DOCKERHUB_USERNAME/IMAGE:${{ steps.upstream.outputs.tag }}
-            docker.io/DOCKERHUB_USERNAME/IMAGE:latest
+            docker.io/a7lanov/telemt:${{ steps.upstream.outputs.tag }}
+            docker.io/a7lanov/telemt:latest
 
       - name: Update stored version
         run: |
@@ -76,7 +76,7 @@ jobs:
 
       - name: Commit updated version
         run: |
-          git config user.name "github-actions"
-          git config user.email "actions@github.com"
+          git config user.name "a7lan"
+          git config user.email "as_lan@bk.ru"
           git add .last_version
           git commit -m "Build ima
