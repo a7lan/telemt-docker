@@ -19,7 +19,7 @@ jobs:
       - name: Get latest upstream release
         id: upstream
         run: |
-          TAG=$(curl -s https://api.github.com/repos/ORG/APP/releases/latest \
+          TAG=$(curl -s https://api.github.com/repos/telemt/telemt/releases/latest \
             | jq -r .tag_name)
 
           if [ "$TAG" = "null" ] || [ -z "$TAG" ]; then
