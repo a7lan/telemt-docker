@@ -79,4 +79,5 @@ jobs:
           git config user.name "a7lan"
           git config user.email "as_lan@bk.ru"
           git add .last_version
-          git commit -m "Build ima
+          git commit -m "Build image for ${{ steps.upstream.outputs.tag }}"
+          git push
